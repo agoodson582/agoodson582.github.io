@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: "Droid Sans", sans-serif;
+}
+
+header {
+    width: 100%;
+    padding-top:;
+    background-color: #FF7400;
+    float: left;
+}
+
+    h1 {
+        margin-left: 30px;
+        float: left;
+    }
+    
+    nav {
+        float: right;
+        margin-top: 32px;
+        margin-bottom: 30px;
+    }
+    
+        nav a {
+            float: left;
+            margin-right: 20px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
