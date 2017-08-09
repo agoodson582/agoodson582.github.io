@@ -37,8 +37,11 @@ header {
         }
 
 .banner {
+    width: 1000px;
+    height: 400px;
     background-image: url(../img/open-sign.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    clear: both;
 }
