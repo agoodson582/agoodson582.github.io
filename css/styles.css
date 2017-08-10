@@ -8,12 +8,26 @@ h2 {
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
+    margin: 25px auto;
 }
 
 input {
+    width: 230px;
     margin: 0 auto;
+    padding: 10px;
     display: block;
     clear: both;
+    border: 1px solid #0097B3;
+}
+
+input[placeholder] {
+    font-family: "Droid Sans", sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: #00D8FF;
 }
 
 header .container {
@@ -73,3 +87,19 @@ span {
         background-attachment: scroll;
         float: left;
     }
+    
+    #right_feature {
+        width: 600px;
+        height: 330px;
+        background-image: url(../img/mechanic-tools.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        float: right;
+    }
+        
+        #right_feature h2 {
+            width: 350px;
+            background-color: gray;
+            background-size: 300px;
+        }
