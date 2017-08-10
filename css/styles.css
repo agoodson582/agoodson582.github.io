@@ -4,7 +4,19 @@ p, a, h1, h2, h3, h4, h5, h6 {
     font-family: "Droid Sans", sans-serif;
 }
 
-header {
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+input {
+    margin: 0 auto;
+    display: block;
+    clear: both;
+}
+
+header .container {
     width: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -36,12 +48,28 @@ header {
             text-decoration: underline;
         }
 
-.banner {
-    width: 1000px;
-    height: 400px;
-    background-image: url(../img/open-sign.jpeg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+span {
+    display: block;
+    width: 1200px;
+    margin: 0px auto;
     clear: both;
 }
+
+    .banner .container {
+        width: 1200px;
+        height: 500px;
+        background-image: url(../img/open-sign.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+    
+    #left_feature {
+        width: 600px;
+        height: 330px;
+        background-image: url(../img/car-keys.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        float: left;
+    }
