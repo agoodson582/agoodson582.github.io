@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 @import url('https://fonts.googleapis.com/css?family=Exo');
 
+body {
+    background: linear-gradient(rgba(0, 151, 179, 1), rgba(0, 151, 179, 0.3),
+    rgba(0, 151, 179, 0.1), rgba(0, 151, 179, 0));
+}
+
 p, a, h1, h2, h3, h4, h5, h6 {
     font-family: "Droid Sans", sans-serif;
 }
@@ -22,6 +27,8 @@ input {
     font-family: "Droid Sans", sans-serif;
     font-size: 16px;
     text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
     input[type=text]:focus, input[type=search]:focus {
@@ -29,8 +36,15 @@ input {
     }
 
 input[type=submit] {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
     background-color: #00D8FF;
+    cursor: pointer;
 }
+
+    input[type=submit]:hover {
+        border: 1px solid #062D35;
+    }
 
     input[type=submit]:active {
         background-color: #0EB3D1;
@@ -73,6 +87,8 @@ header .container {
             font-weight: bold;
             color: black;
             text-decoration: none;
+            -webkit-transition: text-decoration 0.2s; /* Safari */
+            transition: text-decoration 0.2s;
         }
         
         nav a:hover {
@@ -171,6 +187,8 @@ span {
             clear: left;
             max-height: 265px;
             max-width: 500px;
+            outline: 1px solid black;
+            outline-offset: -1px;
         }
         
         #address-bar {
@@ -184,7 +202,7 @@ span {
         
             #address-bar h3, #address-bar p {
                 font-family: "Exo";
-                margin-left: 20px;
+                margin-left: 35px;
             }
             
             #address-bar p {
