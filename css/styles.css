@@ -18,9 +18,6 @@ input {
     display: block;
     clear: both;
     border: 1px solid #0097B3;
-}
-
-input[placeholder] {
     font-family: "Droid Sans", sans-serif;
     font-size: 16px;
     text-align: center;
@@ -30,12 +27,22 @@ input[type=submit] {
     background-color: #00D8FF;
 }
 
+img {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.clearfix {
+    clear: both;
+}
+
 header .container {
     width: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: #FF7400;
     float: left;
+    overflow: auto;
 }
 
     h1 {
@@ -76,7 +83,10 @@ span {
         background-size: cover;
         background-position: center;
         background-attachment: scroll;
+        clear: both;
     }
+    
+    .feature .container { overflow: auto; }
     
     #left_feature {
         width: 600px;
@@ -86,6 +96,7 @@ span {
         background-position: center;
         background-attachment: scroll;
         float: left;
+        clear: left;
     }
     
     #right_feature {
@@ -96,10 +107,70 @@ span {
         background-position: center;
         background-attachment: scroll;
         float: right;
+        clear: right;
     }
         
         #right_feature h2 {
             width: 350px;
             background-color: gray;
             background-size: 300px;
+        }
+        
+    .content .container {
+        width: 900px;
+        margin: 400px auto;
+        clear: both;
+        overflow: auto;
+    }
+        
+        .content .container img:first-child {
+            float: left;
+            clear: left;
+            margin-bottom: 50px
+        }
+        
+        .content .container p:first-of-type {
+            width: 400px;
+            float: right;
+            clear: right;
+            margin-bottom: 50px;
+        }
+        
+        .content .container p:last-of-type {
+            width: 400px;
+            float: left;
+            clear: left;
+        }
+        
+        .content .container img:last-child {
+            float: right;
+            clear: right;
+        }
+        
+    .map-locator .container {
+        width: 1000px;
+        clear: both;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+    
+        map { display: none; }
+    
+        map, #address-bar {
+            float: left;
+            clear: left;
+        }
+        
+        #address-bar {
+            width: 500px;
+            height: 100px;
+            background-color: #E66700;
+        }
+        
+        #map-sidebar {
+            float: right;
+            clear: right;
+            background-color: #FF7400;
+            width: 500px;
+            height: 360px;
         }
