@@ -1,235 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
-@import url('https://fonts.googleapis.com/css?family=Exo');
+/* Font scheme: Oxygen, Fira Sans */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* TODO: Remove default body margin */
+:root {
+    --primary-background-color: #00695C;
+}
 
 body {
-    background: linear-gradient(rgba(0, 151, 179, 1), rgba(0, 151, 179, 0.3),
-    rgba(0, 151, 179, 0.1), rgba(0, 151, 179, 0));
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    background-color: var(--primary-background-color);
 }
 
-p, a, h1, h2, h3, h4, h5, h6 {
-    font-family: "Droid Sans", sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oxygen', sans-serif;
 }
 
-h2 {
+header h1 {
     text-align: center;
-    font-size: 30px;
-    font-weight: bolder;
-    margin: 25px auto;
+    font-size: 2.5em;
 }
 
-input {
-    width: 230px;
-    margin: 0 auto;
-    padding: 10px;
-    display: block;
-    clear: both;
-    border: 1px solid #0097B3;
-    font-family: "Droid Sans", sans-serif;
-    font-size: 16px;
+.center-text {
     text-align: center;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
 }
-
-    input[type=text]:focus, input[type=search]:focus {
-        background-color: #BAD3FC;
-    }
-
-input[type=submit] {
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    background-color: #00D8FF;
-    cursor: pointer;
-}
-
-    input[type=submit]:hover {
-        border: 1px solid #062D35;
-    }
-
-    input[type=submit]:active {
-        background-color: #0EB3D1;
-        text-decoration: underline;
-    }
-
-img {
-    max-width: 400px;
-    max-height: 300px;
-}
-
-.clearfix {
-    clear: both;
-}
-
-header .container {
-    width: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #FF7400;
-    float: left;
-    overflow: auto;
-}
-
-    h1 {
-        margin-left: 30px;
-        float: left;
-    }
-    
-    nav {
-        float: right;
-        margin-top: 32px;
-        margin-bottom: 30px;
-    }
-    
-        nav a {
-            float: left;
-            margin-right: 20px;
-            font-size: 16px;
-            font-weight: bold;
-            color: black;
-            text-decoration: none;
-            -webkit-transition: text-decoration 0.2s; /* Safari */
-            transition: text-decoration 0.2s;
-        }
-        
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-span {
-    display: block;
-    width: 1200px;
-    margin: 0px auto;
-    clear: both;
-}
-
-    .banner .container {
-        width: 1200px;
-        height: 500px;
-        background-image: url(../img/open-sign.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
-        clear: both;
-    }
-    
-    .feature .container { overflow: auto; }
-    
-    #left_feature {
-        width: 600px;
-        height: 330px;
-        background-image: url(../img/car-keys.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
-        float: left;
-        clear: left;
-    }
-    
-    #right_feature {
-        width: 600px;
-        height: 330px;
-        background-image: url(../img/mechanic-tools.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
-        float: right;
-        clear: right;
-    }
-        
-        #right_feature h2 {
-            width: 350px;
-            background-color: gray;
-            background-size: 300px;
-        }
-        
-    .content .container {
-        width: 900px;
-        margin: 50px auto;
-        clear: both;
-        overflow: auto;
-    }
-        
-        .content .container img:first-child {
-            float: left;
-            clear: left;
-            margin-bottom: 50px
-        }
-        
-        .content .container p:first-of-type {
-            width: 400px;
-            float: right;
-            clear: right;
-            margin-bottom: 50px;
-        }
-        
-        .content .container p:last-of-type {
-            width: 400px;
-            float: left;
-            clear: left;
-        }
-        
-        .content .container img:last-child {
-            float: right;
-            clear: right;
-        }
-        
-    .map-locator .container {
-        width: 1000px;
-        clear: both;
-        margin: 0 auto;
-        margin-top: 45px;
-    }
-    
-        map { display: none; }
-        
-        .map-locator .container img {
-            float: left;
-            clear: left;
-            max-height: 265px;
-            max-width: 500px;
-            outline: 1px solid black;
-            outline-offset: -1px;
-        }
-        
-        #address-bar {
-            width: 500px;
-            height: 95px;
-            color: #333333; /* font color */
-            background-color: #E66700;
-            float: left;
-            clear: left;
-        }
-        
-            #address-bar h3, #address-bar p {
-                font-family: "Exo";
-                margin-left: 35px;
-            }
-            
-            #address-bar p {
-                margin-top: 5px;
-            }
-            
-            #address-bar h3 {
-                margin-bottom: 5px;
-            }
-        
-        #map-sidebar {
-            display: inline-block;
-            background-color: #FF7400;
-            width: 500px;
-            height: 360px;
-        }
-        
-            #map-sidebar h2, #map-sidebar p {
-                text-align: center;
-            }
-            
-            #map-sidebar p {
-                width: 300px;
-                margin: auto;
-                margin-bottom: 20px;
-            }
-            
-            #map-sidebar h2 {
-                margin-top: 50px;
-            }
