@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- <link rel="shortcut icon" href="" type="image/svg+xml" sizes="any"> -->
+
         <title>Aaron Goodson | Web & App Developer</title>
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
     </head>
     <body>
         <header>
+            <nav class="flex flex-justify-sb flex-alignitems-c">
+                <a href="#" class="hamburger-menu mobile-only">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                </a>
+
+                <a href="/" class="logo" style="text-decoration: none">
+                    <div style="display:flex; align-items:center; justify-content:center; width:75px; height:75px; background-color:#00695C; border-radius:25%;">
+                        <span style="color:#FFF; font-size:2em;">AG</span>
+                    </div>
+                </a>
+                
+                <div class="links desktop-only flex">
+                    <!-- Flex display property removes whitespace between links -->
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Recent Works</a>
+                </div>
+                
+                <a class="button cta desktop-only">Contact Me</a>
+            </nav>
             <h1>Aaron Goodson</h1>
         </header>
         <main>
             <article>
-                <div style="display:flex; align-items:center; justify-content:center; flex-direction:column; width:500px; height:250px; margin:100px auto; color:black; background-color:#FFEB3B; border:5px solid black; border-radius:15px; box-shadow:0px 5px 15px 2px #000000aa;">
-                    <span class="material-icons" style="font-size:80px; margin-bottom:10px;">construction</span>
-                    <span style="font-family:'Oxygen'; font-size:1.9em; font-weight:bolder;">UNDER CONSTRUCTION</span>
-                </div>
-                <h2 class="center-text">Coming Soon!</h2>
+                
             </article>
         </main>
         <footer></footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>

@@ -1,0 +1,41 @@
+:root {
+    /* Theme colors */
+    --primary-color: #00695C;
+    --secondary-color: #FFA726;
+    --backround-color: #FFF;
+
+    --primary-color-variant: #004D40;
+
+    --on-primary-color: #FFF;
+    --on-background-color: #000;
+    --on-background-color-variant: #777;
+
+    /* Font sizes (ususally based on 16px browser default) */
+    --default-font-size: 1.125rem; /* 18px */
+    
+    --small-font: 0.89rem; /* 16px */
+    --medium-font: 1.12rem; /* 20px */
+    
+    /* Dimensions */
+    --nav-item-spacing: 10px;
+
+    /* Transition timings */
+    --standard-transition-time: 300ms;
+
+    /* Responsive breakpoints (usually based on 16px browser default) */
+    /* Breakpoints up:
+
+    Medium: 640px - 40em
+    Large: 1024px - 64em
+    X-Large: 1400px - 87.5em
+
+    */
+
+    /* Breakpoints down:
+
+    Small: 639px - 39.99em
+    Medium: 1023px - 63.99em
+    Large: 1399px - 87.49em
+
+    */
+}
