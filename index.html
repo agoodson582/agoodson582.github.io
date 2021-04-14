@@ -4,44 +4,92 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- TODO? Come up with an favicon?  -->
         <!-- <link rel="shortcut icon" href="" type="image/svg+xml" sizes="any"> -->
 
-        <title>Aaron Goodson | Web & App Developer</title>
-        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <title>Aaron Goodson | Self-taught Developer</title>
+        <meta name="author" content="Aaron Goodson">
+        <meta name="description" content="A passionate programmer/developer who loves to learn new technologies.">
+
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
     </head>
     <body>
-        <header>
-            <nav class="flex flex-justify-sb flex-alignitems-c">
-                <a href="#" class="hamburger-menu mobile-only">
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                </a>
+        <header class="flex flex-justify-sb flex-alignitems-c">
+            <a href="#" class="hamburger-menu mobile-only">
+               <span></span>
+               <span></span>
+               <span></span>
+            </a>
 
-                <a href="/" class="logo" style="text-decoration: none">
-                    <div style="display:flex; align-items:center; justify-content:center; width:75px; height:75px; background-color:#00695C; border-radius:25%;">
-                        <span style="color:#FFF; font-size:2em;">AG</span>
-                    </div>
-                </a>
-                
-                <div class="links desktop-only flex">
-                    <!-- Flex display property removes whitespace between links -->
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Skills</a>
-                    <a href="#">Recent Works</a>
+            <a href="/" class="logo" style="text-decoration: none">
+                <div style="display:flex; align-items:center; justify-content:center; width:75px; height:75px; background-color:#00695C; border-radius:25%;">
+                    <span style="color:#FFF; font-size:2em;">AG</span>
                 </div>
-                
-                <a class="button cta desktop-only">Contact Me</a>
+            </a>
+            
+            <nav class="links desktop-only flex">
+                <!-- Flex display property used to remove whitespace between links -->
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Recent Works</a>
             </nav>
-            <h1>Aaron Goodson</h1>
+            
+            <a class="button cta desktop-only">Contact Me</a>
         </header>
         <main>
-            <article>
-                
-            </article>
+            <h1 class="headline">Aaron Goodson</h1>
+            <img class="profile-photo" src="assets/img/profile-photo.jpg" alt="Portrait of Aaron Goodson" >
+            <section id="introduction">
+                <h2>Who I Am</h2>
+                <p>I'm a passionate programmer and developer who loves to learn new technologies.</p>
+            </section>
+            <section>
+                <h2>Skills</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Web Technologies & Frameworks</th>
+                            <th>Other Programming Languages</th>
+                            <th>Other Skills (Include this?)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Bootstrap</li>
+                                    <li>Angular</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Kotlin</li>
+                                    <li>Java</li>
+                                    <li>Swift</li>
+                                    <li>Python</li>
+                                    <li>C++</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>Recent Works</h2>
+                <div style="width: 600px; height: 400px; background-color: green; color: white;">[Show works here]</div>
+            </section>
+            <section>
+                <h2>[Other Info]</h2>
+            </section>
         </main>
-        <footer></footer>
+        <footer>
+            [Footer - insert contact & other info here]
+        </footer>
 
         <script src="js/script.js"></script>
     </body>

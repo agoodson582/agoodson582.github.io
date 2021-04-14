@@ -1,8 +1,8 @@
 @import 'variables.css';
 @import 'header.css';
 
-/* Font scheme: Fira Sans, Oxygen */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oxygen&display=swap');
+/* Font scheme: Fira Sans, Oxygen, Salsa */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oxygen&family=Salsa&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 html {
@@ -13,6 +13,14 @@ html {
 
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: var(--medium-font);
+    font-weight: 400;
+    color: var(--on-background-color);
 }
 
 a, a:hover, a:visited {
@@ -34,30 +42,35 @@ a, a:hover, a:visited {
     align-items: center;
 }
 
-.center-text {
-    text-align: center;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-size: var(--medium-font);
-    font-weight: 400;
-    color: var(--on-background-color);
-}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oxygen', sans-serif;
+    text-align: center;
 }
 
-header h1 {
+p {
     text-align: center;
-    font-size: 2.5em;
+}
+
+main > img {
+    display: block;
+}
+
+main > *, section > * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
 }
 
 /* Buttons */
 button, .button {
     padding: 0.8rem 1.8rem;
+    /* TODO: Adjust gradient to look more obvious */
     background: linear-gradient(to right, var(--primary-color), var(--primary-color-variant));
     color: var(--on-primary-color);
     font-size: inherit;
@@ -70,6 +83,32 @@ button, .button {
     .button:hover {
         color: var(--on-primary-color);
     }
+
+
+.headline { 
+    font-family: 'Salsa', sans-serif;
+    font-size: 2.5em;
+}
+
+/* Table */
+th, td {
+    padding: 0.4em;
+    border-radius: 0.3em;
+}
+th {
+    border: 3px solid var(--primary-color);
+}
+
+td {
+    border: 3px solid var(--primary-color);
+}
+
+footer {
+    font-size: var(--small-font);
+    background-color: var(--primary-color-variant);
+    color: var(--on-primary-color);
+    min-height: 100px;
+}
 
 /* Responsive visibility (Refer to variables.css for breakpoint values) */
 @media (max-width: 63.99em) {
