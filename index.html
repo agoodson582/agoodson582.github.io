@@ -14,83 +14,85 @@
         <link rel="stylesheet" href="css/styles.css" type="text/css">
     </head>
     <body>
-        <header class="flex flex-justify-sb flex-alignitems-c">
-            <a href="#" class="hamburger-menu mobile-only">
-               <span></span>
-               <span></span>
-               <span></span>
-            </a>
-
-            <a href="/" class="logo" style="text-decoration: none">
-                <div style="display:flex; align-items:center; justify-content:center; width:75px; height:75px; background-color:#00695C; border-radius:25%;">
-                    <span style="color:#FFF; font-size:2em;">AG</span>
-                </div>
-            </a>
+        <div class="page-content">
+            <header class="flex flex-justify-sb flex-alignitems-c">
+                <a href="#" class="hamburger-menu mobile-only">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                </a>
+                <a href="/" class="logo" style="text-decoration: none">
+                    <!-- TODO: Use self-portrait here -->
+                    <div style="display:flex; align-items:center; justify-content:center; width:75px; height:75px; background-color:#00695C; border-radius:25%;">
+                        <span style="color:#FFF; font-size:2em;">AG</span>
+                    </div>
+                </a>
             
-            <nav class="links desktop-only flex">
-                <!-- Flex display property used to remove whitespace between links -->
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Recent Works</a>
-            </nav>
+                <nav class="links desktop-only flex">
+                    <!-- Flex display property used to remove whitespace between links -->
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Recent Works</a>
+                </nav>
             
-            <a class="button cta desktop-only">Contact Me</a>
-        </header>
-        <main>
-            <h1 class="headline">Aaron Goodson</h1>
-            <img class="profile-photo" src="assets/img/profile-photo.jpg" alt="Portrait of Aaron Goodson" >
-            <section id="introduction">
-                <h2>Who I Am</h2>
-                <p>I'm a passionate programmer and developer who loves to learn new technologies.</p>
-            </section>
-            <section>
-                <h2>Skills</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Web Technologies & Frameworks</th>
-                            <th>Other Programming Languages</th>
-                            <th>Other Skills (Include this?)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>Bootstrap</li>
-                                    <li>Angular</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Kotlin</li>
-                                    <li>Java</li>
-                                    <li>Swift</li>
-                                    <li>Python</li>
-                                    <li>C++</li>
-                                    <li>SQL</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section>
-                <h2>Recent Works</h2>
-                <div style="width: 600px; height: 400px; background-color: green; color: white;">[Show works here]</div>
-            </section>
-            <section>
-                <h2>[Other Info]</h2>
-            </section>
-        </main>
-        <footer>
-            [Footer - insert contact & other info here]
-        </footer>
-
+                <a class="button cta desktop-only">Contact Me</a>
+            </header>
+            <main>
+                <h1 class="headline">Aaron Goodson</h1>
+                <img class="profile-photo" src="assets/img/profile-photo.jpg" alt="Portrait of Aaron Goodson" >
+                <section id="introduction">
+                    <h2>Who I Am</h2>
+                    <p>I'm a passionate programmer and developer who loves to learn new technologies.</p>
+                </section>
+                <section>
+                    <h2>Skills</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Web Technologies & Frameworks</th>
+                                <th>Other Programming Languages</th>
+                                <th>Other Skills (Include this?)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Bootstrap</li>
+                                        <li>Angular</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Kotlin</li>
+                                        <li>Java</li>
+                                        <li>Swift</li>
+                                        <li>Python</li>
+                                        <li>C++</li>
+                                        <li>SQL</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Recent Works</h2>
+                    <div style="width: 600px; height: 400px; background-color: green; color: white;">[Show works here]</div>
+                </section>
+                <section>
+                    <h2>[Other Info]</h2>
+                </section>
+            </main>
+            <footer>
+                [Footer - insert contact & other info here]
+            </footer>
+        </div>
+        <a class="to-top" href="#"><span class="material-icons md-48">arrow_upward</span></a>
         <script src="js/script.js"></script>
     </body>
 </html>

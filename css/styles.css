@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oxygen&family=Salsa&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-html {
+:root {
     font-size: var(--default-font-size);
     box-sizing: border-box;
     font-family: 'Fira Sans', sans-serif;
@@ -16,9 +16,11 @@ html {
 }
 
 body {
+    display: grid;
+    /* TODO: Fix column issue by creating outer element for non-to-top button content */
+    grid-template-columns: auto 0;
     margin: 0;
     padding: 0;
-    font-size: var(--medium-font);
     font-weight: 400;
     color: var(--on-background-color);
 }
@@ -49,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+    font-size: var(--medium-font);
     text-align: center;
 }
 
@@ -108,6 +111,30 @@ footer {
     background-color: var(--primary-color-variant);
     color: var(--on-primary-color);
     min-height: 100px;
+}
+
+.to-top {
+    aspect-ratio: 1;
+    width: 3em;
+    place-self: end;
+    position: sticky;
+    bottom: 1.1em;
+    margin-right: 1.1em;
+    --offset: 100px;
+    margin-top: calc(100vh + var(--offset));
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+    white-space: nowrap;
+}
+
+.to-top > .material-icons {
+    width: 100%;
+    color: var(--on-primary-color);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Responsive visibility (Refer to variables.css for breakpoint values) */
