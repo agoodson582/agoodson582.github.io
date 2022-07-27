@@ -17,7 +17,6 @@
 
 body {
     display: grid;
-    /* TODO: Fix column issue by creating outer element for non-to-top button content */
     grid-template-columns: auto 0;
     margin: 0;
     padding: 0;
@@ -59,15 +58,19 @@ main > img {
     display: block;
 }
 
+main > * {
+    padding-inline: 1em;
+}
+
 main > *, section > * {
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
 }
 
 .profile-photo {
-    width: 200px;
+    aspect-ratio: 1;
     height: 200px;
     border-radius: 25%;
+    box-sizing: content-box;
 }
 
 /* Buttons */
@@ -91,6 +94,23 @@ button, .button {
 .headline { 
     font-family: 'Salsa', sans-serif;
     font-size: 2.5em;
+}
+
+/* Skill Cards (Grid) */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.skills-container > article {
+    padding: 0.4em;
+    border-radius: 0.5em;
+    border: 3px solid var(--primary-color);
+}
+
+.skills-container > article > ul {
+    padding-left: 1.5em;
 }
 
 /* Table */
