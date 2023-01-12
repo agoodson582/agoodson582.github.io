@@ -101,29 +101,42 @@ button, .button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
+    max-width: 1000px;
 }
 
 .skills-container > article {
     padding: 0.4em;
     border-radius: 0.5em;
     border: 3px solid var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: right -30px bottom -50px;
+    box-shadow: 0 3px 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.skills-container > article#web-skills {
+    background-image: url("../assets/img/web_24px.svg");
+}
+
+.skills-container > article#other-languages {
+    background-image: url("../assets/img/terminal_24px.svg");
+}
+
+.skills-container > article#other-skills {
+    background-image: url("../assets/img/computer_24px.svg");
+}
+
+.skills-container > article > *:first-child {
+    border-bottom: 2px solid var(--primary-color-variant);
+    padding-bottom: 0.4em;
+    margin-top: 0;
 }
 
 .skills-container > article > ul {
-    padding-left: 1.5em;
-}
-
-/* Table */
-th, td {
-    padding: 0.4em;
-    border-radius: 0.3em;
-}
-th {
-    border: 3px solid var(--primary-color);
-}
-
-td {
-    border: 3px solid var(--primary-color);
+    padding-inline-start: 0.7em;
+    list-style-type: none;
+    /* text-align: center; */
+    line-height: 1.6em;
 }
 
 footer {
