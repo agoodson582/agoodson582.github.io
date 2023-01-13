@@ -1,8 +1,15 @@
+header .hidden {
+    display: none;
+}
+
 header {
-    padding: 1rem 1.4rem;
+    padding: 1rem 0;
 }
 
 /* Menu icon */
+header .hamburger-menu {
+    margin-inline: 1.4rem
+}
 header .hamburger-menu > span {
     display: block;
     width: 25px;
@@ -14,6 +21,7 @@ header .hamburger-menu > span {
     }
     
 header .logo {
+    margin-inline: 1.4rem;
     transition: opacity var(--standard-transition-time) ease-in-out;
 }
     header .logo:hover {
@@ -32,6 +40,19 @@ header .links > a {
 }
 header .links > a:not(:last-child) {
     margin-right: 24px;
+}
+header .links.mobile-only {
+    position: static;
+    background-color: lightgray;
+    margin-top: 10px;
+    padding: 25px;
+    transform: none;
+}
+header .links.mobile-only > a {
+    display: block;
+}
+header .links.links.mobile-only > a:not(:last-child) {
+    margin-bottom: 15px;
 }
 header .links > a:hover {
     color: var(--on-background-color);
@@ -56,6 +77,7 @@ header .links > a::before {
 
 header .cta {
     font-size: var(--small-font);
+    margin-inline: 1.4rem;
     transition: opacity var(--standard-transition-time) ease-in-out;
 }
     header .cta:hover {
