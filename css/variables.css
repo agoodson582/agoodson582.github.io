@@ -11,10 +11,10 @@
     --on-background-color-variant: #777;
 
     /* Font sizes (ususally based on 16px browser default) */
-    --default-font-size: 1.125rem; /* 18px */
+    --default-font-size: 1.125rem; /* Approx 20px */
     
-    --small-font: 0.89rem; /* 16px */
-    --medium-font: 1.12rem; /* 20px */
+    --small-font: 0.89rem; /* Approx 16px */
+    --medium-font: 1.12rem; /* Approx 20px */
     
     /* Dimensions */
     --nav-item-spacing: 10px;

@@ -27,6 +27,7 @@ body {
 a, a:hover, a:visited {
     color: var(--on-background-color-variant);
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* Flexbox styles */
@@ -97,14 +98,14 @@ button, .button {
 }
 
 /* Skill Cards (Grid) */
-.skills-container {
+.skill-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     max-width: 1000px;
 }
 
-.skills-container > article {
+.skill-cards > article {
     padding: 0.4em;
     border-radius: 0.5em;
     border: 3px solid var(--primary-color);
@@ -114,29 +115,79 @@ button, .button {
     box-shadow: 0 3px 8px 3px rgba(0, 0, 0, 0.2);
 }
 
-.skills-container > article#web-skills {
+.skill-cards > article#web-skills {
     background-image: url("../assets/img/web_24px.svg");
 }
 
-.skills-container > article#other-languages {
+.skill-cards > article#other-languages {
     background-image: url("../assets/img/terminal_24px.svg");
 }
 
-.skills-container > article#other-skills {
+.skill-cards > article#other-skills {
     background-image: url("../assets/img/computer_24px.svg");
 }
 
-.skills-container > article > *:first-child {
+.skill-cards > article > *:first-child {
     border-bottom: 2px solid var(--primary-color-variant);
     padding-bottom: 0.4em;
     margin-top: 0;
 }
 
-.skills-container > article > ul {
+.skill-cards > article > ul {
     padding-inline-start: 0.7em;
     list-style-type: none;
-    /* text-align: center; */
     line-height: 1.6em;
+}
+
+.image-slide-container {
+    position: relative;
+}
+
+.image-slide {
+    display: none;
+}
+
+.image-slide > img {
+    width: 100%;
+}
+
+.prev-slide-button, .next-slide-button {
+    position: absolute;
+    top: 37%;
+    padding: 16px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 0 0.3em 0.3em 0;
+    font-size: var(--default-font-size);
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next-slide-button {
+    right: 0;
+    border-radius: 0.3em 0 0 0.3em;
+}
+
+.prev-slide-button:hover, .next-slide-button:hover {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.image-slide-thumbnails > img {
+    max-width: 150px;
+    opacity: 0.65;
+    border-radius: 7px;
+    margin-inline: 4px;
+    cursor: pointer;
+}
+
+img.active, .image-slide-thumbnails > img:hover {
+    opacity: 1;
+}
+
+.image-slide-thumbnails > img:active {
+    outline: 2px solid black;
 }
 
 footer {

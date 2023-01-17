@@ -17,7 +17,7 @@
         <div class="page-content">
             <header>
                 <div class="main-continer flex flex-justify-sb flex-alignitems-c">
-                    <a href="#" class="hamburger-menu mobile-only">
+                    <a class="hamburger-menu mobile-only">
                        <span></span>
                        <span></span>
                        <span></span>
@@ -31,18 +31,18 @@
                     <nav class="links desktop-only flex">
                         <!-- Flex display property used to remove whitespace between links -->
                         <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Skills</a>
-                        <a href="#">Previous Works</a>
+                        <a href="#introduction">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#previous-works">Previous Works</a>
                     </nav>
                     
                     <a class="button cta desktop-only">Contact Me</a>
                 </div>
                 <nav class="links mobile-only hidden">
                     <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Skills</a>
-                    <a href="#">Previous Works</a>
+                    <a href="#introduction">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#previous-works">Previous Works</a>
                 </nav>
             </header>
             <main>
@@ -52,9 +52,9 @@
                     <h2>Who I Am</h2>
                     <p>I'm a passionate programmer and developer who loves to learn new technologies.</p>
                 </section>
-                <section>
+                <section id="skills">
                     <h2>Skills</h2>
-                    <div class="skills-container">
+                    <div class="skill-cards">
                         <article id="web-skills">
                             <h3>Web Technologies & Frameworks</h3>
                             <ul>
@@ -84,19 +84,55 @@
                         </article>
                     </div>
                 </section>
-                <section>
+                <section id="previous-works">
                     <h2>Previous Works</h2>
-                    <div style="width: 600px; height: 400px; background-color: green; color: white;">[Show works here]</div>
+                    <article class="image-slides">
+                        <h3>Check it out!</h3>
+                        <div class="image-slide-container">
+                            <!-- Full image slides with number indicators -->
+                            <div class="image-slide">
+                                <div class="number-indicator"></div>
+                                <img src="assets/img/slide1.jpg">
+                            </div>
+                            
+                            <div class="image-slide">
+                                <div class="number-indicator"></div>
+                                <img src="assets/img/slide2.jpg">
+                            </div>
+
+                            <div class="image-slide">
+                                <div class="number-indicator"></div>
+                                <img src="assets/img/slide3.jpg">
+                            </div>
+
+                            <!-- Next/previous buttons -->
+                            <a class="prev-slide-button">&#10094;</a>
+                            <a class="next-slide-button">&#10095;</a>
+
+                            <!-- Image caption text -->
+                            <div class="image-slide-caption">
+                                <p>Test</p>
+                            </div>
+
+                            <!-- Image slide thumbnails -->
+                            <!-- TODO: Implement thumbnail versions of these images -->
+                            <div class="image-slide-thumbnails flex flex-justify-c">
+                                <img src="assets/img/slide1.jpg" alt="Path to the beach">
+                                <img src="assets/img/slide2.jpg" alt="The ocean">
+                                <img src="assets/img/slide3.jpg" alt="The beach">
+                            </div>
+                        </div>
+                    </article>
                 </section>
                 <section>
                     <h2>[Other Info]</h2>
                 </section>
             </main>
             <footer>
-                [Footer - insert contact & other info here]
+                <em>[Footer - insert contact & other info here]</em>
             </footer>
         </div>
-        <a class="to-top" href="#"><span class="material-icons md-48">arrow_upward</span></a>
+        <a class="to-top" title="Scroll to top" href="#"><span class="material-icons md-48">arrow_upward</span></a>
         <script src="js/script.js"></script>
     </body>
 </html>
