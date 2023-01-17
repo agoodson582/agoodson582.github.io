@@ -1,3 +1,4 @@
+const CLASS_ACTIVE_HEADER = 'active'
 const CLASS_ACTIVE_IMG = 'active'
 const CLASS_HIDDEN = 'hidden'
 
@@ -10,6 +11,16 @@ setSlide(currentSlide)
 // Event listeners
 document.getElementsByClassName('hamburger-menu')[0].addEventListener('click', () => {
     toggleMobileLinks()
+})
+document.getElementsByClassName('links mobile-only')[0].childNodes.forEach(link => {
+    link.addEventListener('click', () => toggleMobileLinks())
+})
+document.addEventListener('click', ev => {
+    let header = document.getElementsByTagName('header')[0]
+    if (!ev.composedPath().includes(header) && header.classList.contains('active')) {
+        toggleMobileLinks()
+    }
+    console.log(ev.composedPath().includes(document.getElementsByTagName('footer')[0]))
 })
 document.getElementsByClassName('prev-slide-button')[0].addEventListener('click', () => {
     advanceSlidesBy(-1)
@@ -24,8 +35,8 @@ for (const thumbnail of thumbnailEntries) {
 
 function toggleMobileLinks() {
     let mLinks = document.querySelector('header .links.mobile-only')
-    console.log(mLinks.classList)
     mLinks.classList.toggle(CLASS_HIDDEN)
+    mLinks.parentElement.classList.toggle(CLASS_ACTIVE_HEADER)
 }
 
 function advanceSlidesBy(number) {

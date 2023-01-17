@@ -55,12 +55,20 @@ p {
     text-align: center;
 }
 
+main {
+    margin-top: 8em;
+}
+
 main > img {
     display: block;
 }
 
 main > * {
     padding-inline: 1em;
+}
+
+section {
+    scroll-margin-top: 7rem;
 }
 
 main > *, section > * {
@@ -112,7 +120,7 @@ button, .button {
     background-repeat: no-repeat;
     background-size: 75%;
     background-position: right -30px bottom -50px;
-    box-shadow: 0 3px 8px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 8px 3px rgba(0,0,0,0.2);
 }
 
 .skill-cards > article#web-skills {
