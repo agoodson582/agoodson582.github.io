@@ -18,6 +18,7 @@
     
     /* Dimensions */
     --nav-item-spacing: 10px;
+    --max-content-width: 1000px;
 
     /* Transition timings */
     --standard-transition-time: 300ms;
