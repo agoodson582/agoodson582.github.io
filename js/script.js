@@ -5,8 +5,13 @@ const CLASS_HIDDEN = 'hidden'
 let currentSlide = 1
 
 console.log("Hello world! Thanks for visiting!")
+let slideCaptions = document.querySelectorAll('.image-slide-caption')
+let thumbnailDiv = document.getElementsByClassName('image-slide-thumbnails')[0]
+for (let i = 0; i < thumbnailDiv.children.length; i++) {
+    let slideCaption = slideCaptions[i].getElementsByTagName('p')[0]
+    slideCaption.textContent = thumbnailDiv.children[i].alt
+}
 setSlide(currentSlide)
-
 
 // Event listeners
 document.getElementsByClassName('hamburger-menu')[0].addEventListener('click', () => {
@@ -20,7 +25,6 @@ document.addEventListener('click', ev => {
     if (!ev.composedPath().includes(header) && header.classList.contains('active')) {
         toggleMobileLinks()
     }
-    console.log(ev.composedPath().includes(document.getElementsByTagName('footer')[0]))
 })
 document.getElementsByClassName('prev-slide-button')[0].addEventListener('click', () => {
     advanceSlidesBy(-1)
@@ -50,7 +54,6 @@ function setSlide(number) {
 function viewSlide(number) {
     let slides = document.getElementsByClassName('image-slide')
     let thumbnails = document.getElementsByClassName('image-slide-thumbnails')[0].children
-    let captionText = document.getElementsByClassName('image-slide-caption')[0].children[0]
     
     if (number > slides.length) currentSlide = 1 // wrap to beginning
     if (number < 1) currentSlide = slides.length // wrap to end
@@ -65,5 +68,4 @@ function viewSlide(number) {
 
     slides[currentSlide-1].style.display = 'block'
     thumbnails[currentSlide-1].classList.add(CLASS_ACTIVE_IMG)
-    captionText.innerHTML = thumbnails[currentSlide-1].alt
 }
