@@ -9,7 +9,7 @@ let slideCaptions = document.querySelectorAll('.image-slide-caption')
 let thumbnailDiv = document.getElementsByClassName('image-slide-thumbnails')[0]
 for (let i = 0; i < thumbnailDiv.children.length; i++) {
     let slideCaption = slideCaptions[i].getElementsByTagName('p')[0]
-    slideCaption.textContent = thumbnailDiv.children[i].alt
+    slideCaption.textContent = thumbnailDiv.children[i].ariaLabel
 }
 setSlide(currentSlide)
 
@@ -22,7 +22,7 @@ document.getElementsByClassName('links mobile-only')[0].childNodes.forEach(link 
 })
 document.addEventListener('click', ev => {
     let header = document.getElementsByTagName('header')[0]
-    if (!ev.composedPath().includes(header) && header.classList.contains('active')) {
+    if (!ev.composedPath().includes(header) && header.classList.contains(CLASS_ACTIVE_HEADER)) {
         toggleMobileLinks()
     }
 })
@@ -32,7 +32,7 @@ document.getElementsByClassName('prev-slide-button')[0].addEventListener('click'
 document.getElementsByClassName('next-slide-button')[0].addEventListener('click', () => {
     advanceSlidesBy(1)
 })
-let thumbnailEntries = document.querySelectorAll('.image-slide-thumbnails > img').entries()
+let thumbnailEntries = document.querySelectorAll('.image-slide-thumbnails > div').entries()
 for (const thumbnail of thumbnailEntries) {
     thumbnail[1].addEventListener('click', () => setSlide(thumbnail[0] + 1))
 }
